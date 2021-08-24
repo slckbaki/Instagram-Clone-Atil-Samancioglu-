@@ -8,17 +8,17 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item 2-->
+        <!--Upload VC-->
         <scene sceneID="BID-nD-gMC">
             <objects>
-                <viewController id="JML-hq-2V2" sceneMemberID="viewController">
+                <viewController title="Upload VC" id="JML-hq-2V2" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3EF-sA-chv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="nwu-ul-FNC"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="oOB-03-jQJ"/>
+                    <tabBarItem key="tabBarItem" title="Upload" image="u.circle.fill" catalog="system" id="oOB-03-jQJ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WzK-ex-unb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -60,17 +60,30 @@
             </objects>
             <point key="canvasLocation" x="-1368" y="-241"/>
         </scene>
-        <!--Item-->
+        <!--Settings-->
         <scene sceneID="E4x-EG-WL0">
             <objects>
-                <viewController id="T22-U4-jSY" sceneMemberID="viewController">
+                <viewController id="T22-U4-jSY" customClass="SettingsViewController" customModule="_9_Instagram_Clone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EiZ-MW-bBf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Nn-QR-cxA">
+                                <rect key="frame" x="160" y="425" width="55" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Log Out"/>
+                                <connections>
+                                    <action selector="logoutClick:" destination="T22-U4-jSY" eventType="touchUpInside" id="IZ9-zf-Sf9"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="iyR-ls-m8a"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="pVS-lX-w1u"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="pencil" catalog="system" id="pVS-lX-w1u"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="toViewController" modalPresentationStyle="fullScreen" id="Agk-Qo-V3o"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gb5-ex-DvB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -84,13 +97,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FzW-Vs-bGx">
-                                <rect key="frame" x="62" y="318" width="47" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FzW-Vs-bGx">
+                                <rect key="frame" x="62" y="319" width="47" height="29"/>
                                 <state key="normal" title="Sign In"/>
+                                <connections>
+                                    <action selector="signinClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hdu-2e-K5o"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ljl-y9-vv6">
-                                <rect key="frame" x="258" y="318" width="54" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ljl-y9-vv6">
+                                <rect key="frame" x="258" y="319" width="54" height="29"/>
                                 <state key="normal" title="Sign Up"/>
+                                <connections>
+                                    <action selector="signupClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DeR-PF-1HF"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GIb-t9-QS4">
                                 <rect key="frame" x="0.0" y="99" width="375" height="34"/>
@@ -141,7 +160,10 @@
                             <constraint firstItem="Mfr-7y-K5J" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yec-ZW-ELz"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Msc-I6-Hca"/>
                     <connections>
+                        <outlet property="emailText" destination="GIb-t9-QS4" id="ekY-Yf-B4f"/>
+                        <outlet property="passwordText" destination="VyU-tc-jo6" id="N5l-Yq-eYD"/>
                         <segue destination="OxR-wO-Cmr" kind="presentation" identifier="toFeedVC" modalPresentationStyle="fullScreen" id="Ym9-v7-Rd4"/>
                     </connections>
                 </viewController>
@@ -152,6 +174,8 @@
     </scenes>
     <resources>
         <image name="f.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="pencil" catalog="system" width="128" height="113"/>
+        <image name="u.circle.fill" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

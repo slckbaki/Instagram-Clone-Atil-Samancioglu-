@@ -14,6 +14,9 @@
 		A199F5E226D4417100F8A842 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A199F5E126D4417100F8A842 /* Assets.xcassets */; };
 		A199F5E526D4417100F8A842 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A199F5E326D4417100F8A842 /* LaunchScreen.storyboard */; };
 		A199F5ED26D4488300F8A842 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A199F5EC26D4488200F8A842 /* GoogleService-Info.plist */; };
+		A1D7B8A026D55B90002BAF8A /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D7B89F26D55B90002BAF8A /* FeedViewController.swift */; };
+		A1D7B8A226D55BA2002BAF8A /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D7B8A126D55BA2002BAF8A /* UploadViewController.swift */; };
+		A1D7B8A426D55BB4002BAF8A /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D7B8A326D55BB4002BAF8A /* SettingsViewController.swift */; };
 		BEFEBEAF18A39AB50DC1763A /* Pods_19_Instagram_Clone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6659CC6E3DADF59C0B3534F6 /* Pods_19_Instagram_Clone.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +32,9 @@
 		A199F5E426D4417100F8A842 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A199F5E626D4417100F8A842 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A199F5EC26D4488200F8A842 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A1D7B89F26D55B90002BAF8A /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		A1D7B8A126D55BA2002BAF8A /* UploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
+		A1D7B8A326D55BB4002BAF8A /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SettingsViewController.swift; path = "../New Group/SettingsViewController.swift"; sourceTree = "<group>"; };
 		FEABEFA182946B9901F2E96A /* Pods-19-Instagram Clone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-19-Instagram Clone.release.xcconfig"; path = "Target Support Files/Pods-19-Instagram Clone/Pods-19-Instagram Clone.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -67,7 +73,7 @@
 			children = (
 				A199F5D826D4415A00F8A842 /* AppDelegate.swift */,
 				A199F5DA26D4415A00F8A842 /* SceneDelegate.swift */,
-				A199F5DC26D4415A00F8A842 /* ViewController.swift */,
+				A1D7B8A526D55BC4002BAF8A /* View Controllers */,
 				A199F5DE26D4415A00F8A842 /* Main.storyboard */,
 				A199F5E126D4417100F8A842 /* Assets.xcassets */,
 				A199F5E326D4417100F8A842 /* LaunchScreen.storyboard */,
@@ -75,6 +81,17 @@
 				A199F5EC26D4488200F8A842 /* GoogleService-Info.plist */,
 			);
 			path = "19-Instagram Clone";
+			sourceTree = "<group>";
+		};
+		A1D7B8A526D55BC4002BAF8A /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A199F5DC26D4415A00F8A842 /* ViewController.swift */,
+				A1D7B89F26D55B90002BAF8A /* FeedViewController.swift */,
+				A1D7B8A126D55BA2002BAF8A /* UploadViewController.swift */,
+				A1D7B8A326D55BB4002BAF8A /* SettingsViewController.swift */,
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 		C1C7D5174AAB17119BFAFBE3 /* Pods */ = {
@@ -210,8 +227,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				A199F5DD26D4415A00F8A842 /* ViewController.swift in Sources */,
+				A1D7B8A226D55BA2002BAF8A /* UploadViewController.swift in Sources */,
 				A199F5D926D4415A00F8A842 /* AppDelegate.swift in Sources */,
+				A1D7B8A026D55B90002BAF8A /* FeedViewController.swift in Sources */,
 				A199F5DB26D4415A00F8A842 /* SceneDelegate.swift in Sources */,
+				A1D7B8A426D55BB4002BAF8A /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
