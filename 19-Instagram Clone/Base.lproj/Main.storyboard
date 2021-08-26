@@ -11,18 +11,55 @@
         <!--Upload VC-->
         <scene sceneID="BID-nD-gMC">
             <objects>
-                <viewController title="Upload VC" id="JML-hq-2V2" sceneMemberID="viewController">
+                <viewController title="Upload VC" id="JML-hq-2V2" customClass="UploadViewController" customModule="_9_Instagram_Clone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3EF-sA-chv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="upload photo" translatesAutoresizingMaskIntoConstraints="NO" id="PnK-wM-A3a">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="213"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="213" id="H1S-MH-QNz"/>
+                                    <constraint firstAttribute="width" constant="375" id="Lwf-cO-Ash"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="213" id="Tkt-Dc-gmW"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ddo-Ek-io0">
+                                <rect key="frame" x="0.0" y="252" width="375" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wKz-Ot-IF5">
+                                <rect key="frame" x="163" y="432" width="49" height="30"/>
+                                <state key="normal" title="Upload"/>
+                                <connections>
+                                    <action selector="uploadClick:" destination="JML-hq-2V2" eventType="touchUpInside" id="sBb-QI-Hhg"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="nwu-ul-FNC"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="PnK-wM-A3a" firstAttribute="leading" secondItem="3EF-sA-chv" secondAttribute="leading" id="0cZ-xx-mNe"/>
+                            <constraint firstItem="Ddo-Ek-io0" firstAttribute="top" secondItem="PnK-wM-A3a" secondAttribute="bottom" constant="39" id="3Gh-GL-Buf"/>
+                            <constraint firstItem="PnK-wM-A3a" firstAttribute="top" secondItem="nwu-ul-FNC" secondAttribute="top" id="68K-nc-Qw5"/>
+                            <constraint firstItem="nwu-ul-FNC" firstAttribute="bottom" secondItem="wKz-Ot-IF5" secondAttribute="bottom" constant="156" id="OTn-u8-yei"/>
+                            <constraint firstItem="PnK-wM-A3a" firstAttribute="leading" secondItem="Ddo-Ek-io0" secondAttribute="leading" id="PdN-0s-kjI"/>
+                            <constraint firstItem="Ddo-Ek-io0" firstAttribute="centerX" secondItem="wKz-Ot-IF5" secondAttribute="centerX" id="XGF-4O-gyt"/>
+                            <constraint firstAttribute="trailing" secondItem="PnK-wM-A3a" secondAttribute="trailing" id="bdy-dW-VKI"/>
+                            <constraint firstItem="PnK-wM-A3a" firstAttribute="trailing" secondItem="Ddo-Ek-io0" secondAttribute="trailing" id="lkQ-8h-s07"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Upload" image="u.circle.fill" catalog="system" id="oOB-03-jQJ"/>
+                    <connections>
+                        <outlet property="commentText" destination="Ddo-Ek-io0" id="WTl-Tu-h8c"/>
+                        <outlet property="imageView" destination="PnK-wM-A3a" id="YRT-de-tEp"/>
+                        <outlet property="uploadButton" destination="wKz-Ot-IF5" id="6go-bf-2fj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WzK-ex-unb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-447" y="170"/>
+            <point key="canvasLocation" x="-447.19999999999999" y="169.56521739130437"/>
         </scene>
         <!--Feed-->
         <scene sceneID="dqC-w5-5Np">
@@ -43,7 +80,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="TCD-Tm-dea">
             <objects>
-                <tabBarController id="OxR-wO-Cmr" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="tabBar" id="OxR-wO-Cmr" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="PfR-8Y-jfr"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="wKj-hU-qIn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
@@ -176,6 +213,7 @@
         <image name="f.circle.fill" catalog="system" width="128" height="121"/>
         <image name="pencil" catalog="system" width="128" height="113"/>
         <image name="u.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="upload photo" width="365" height="365"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
