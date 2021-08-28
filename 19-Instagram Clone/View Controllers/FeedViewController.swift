@@ -26,8 +26,7 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-        
+            //Github icin test
         tableView.delegate = self
         tableView.dataSource = self
         
