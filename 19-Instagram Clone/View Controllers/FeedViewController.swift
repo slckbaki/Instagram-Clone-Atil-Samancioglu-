@@ -27,6 +27,7 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
         super.viewDidLoad()
 
             //Github icin test
+        //GITHUB ICIN TEST2
         tableView.delegate = self
         tableView.dataSource = self
         
