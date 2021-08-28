@@ -23,7 +23,7 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
     var likeArray = [Int]()
     var userImageArray = [String]()
     var postedDateArray = [Date]()
-    
+    var documentIdArray = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,8 +49,12 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
                     self.commentArray.removeAll(keepingCapacity: false)
                     self.likeArray.removeAll(keepingCapacity: false)
                     self.postedDateArray.removeAll(keepingCapacity: false)
+                    self.documentIdArray.removeAll(keepingCapacity: false)
                     for document in snapshot!.documents{
                         let documentID = document.documentID
+                        self.documentIdArray.append(documentID)
+                        
+                        
                         if let postedBy = document.get("postedBy") as? String{
                             self.userEmailArray.append(postedBy)
                         }
@@ -88,7 +92,7 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
 
         cell.commentsLabel.text = commentArray[indexPath.row]
         cell.postImageView.sd_setImage(with: URL(string: self.userImageArray[indexPath.row]))
-        
+        cell.documentIDLabel.text = documentIdArray[indexPath.row]
         return cell
     }
 }

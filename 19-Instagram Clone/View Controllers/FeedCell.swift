@@ -11,6 +11,7 @@ class FeedCell: UITableViewCell {
 
     @IBOutlet weak var postImageView: UIImageView!
     
+    @IBOutlet weak var documentIDLabel: UILabel!
     @IBOutlet weak var likeButton: UIButton!
     @IBOutlet weak var postedDate: UIDatePicker!
     @IBOutlet weak var likeLabel: UILabel!
@@ -30,7 +31,10 @@ class FeedCell: UITableViewCell {
     }
 
     @IBAction func likeClick(_ sender: Any) {
-        print("like clicked")
+        
+        
+        
+        
         
     }
 }
