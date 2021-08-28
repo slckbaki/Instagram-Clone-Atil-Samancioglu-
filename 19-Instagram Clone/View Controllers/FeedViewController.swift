@@ -23,6 +23,8 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
     var likeArray = [Int]()
     var userImageArray = [String]()
     var postedDateArray = [Date]()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
