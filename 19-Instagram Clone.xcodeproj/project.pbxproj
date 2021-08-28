@@ -14,6 +14,7 @@
 		A199F5E226D4417100F8A842 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A199F5E126D4417100F8A842 /* Assets.xcassets */; };
 		A199F5E526D4417100F8A842 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A199F5E326D4417100F8A842 /* LaunchScreen.storyboard */; };
 		A199F5ED26D4488300F8A842 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A199F5EC26D4488200F8A842 /* GoogleService-Info.plist */; };
+		A1C12DCF26D8682200CC5CA1 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C12DCE26D8682100CC5CA1 /* FeedCell.swift */; };
 		A1D7B8A026D55B90002BAF8A /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D7B89F26D55B90002BAF8A /* FeedViewController.swift */; };
 		A1D7B8A226D55BA2002BAF8A /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D7B8A126D55BA2002BAF8A /* UploadViewController.swift */; };
 		A1D7B8A426D55BB4002BAF8A /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D7B8A326D55BB4002BAF8A /* SettingsViewController.swift */; };
@@ -32,6 +33,7 @@
 		A199F5E426D4417100F8A842 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A199F5E626D4417100F8A842 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A199F5EC26D4488200F8A842 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A1C12DCE26D8682100CC5CA1 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		A1D7B89F26D55B90002BAF8A /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		A1D7B8A126D55BA2002BAF8A /* UploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
 		A1D7B8A326D55BB4002BAF8A /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SettingsViewController.swift; path = "../New Group/SettingsViewController.swift"; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 				A1D7B89F26D55B90002BAF8A /* FeedViewController.swift */,
 				A1D7B8A126D55BA2002BAF8A /* UploadViewController.swift */,
 				A1D7B8A326D55BB4002BAF8A /* SettingsViewController.swift */,
+				A1C12DCE26D8682100CC5CA1 /* FeedCell.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -226,6 +229,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1C12DCF26D8682200CC5CA1 /* FeedCell.swift in Sources */,
 				A199F5DD26D4415A00F8A842 /* ViewController.swift in Sources */,
 				A1D7B8A226D55BA2002BAF8A /* UploadViewController.swift in Sources */,
 				A199F5D926D4415A00F8A842 /* AppDelegate.swift in Sources */,

@@ -10,9 +10,12 @@ import Firebase
 
 class UploadViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
 
+    @IBOutlet weak var postDate: UIDatePicker!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var commentText: UITextField!
     @IBOutlet weak var uploadButton: UIButton!
+    
+    var postDateFormat : NSDate?
     
     
     override func viewDidLoad() {
@@ -21,6 +24,9 @@ class UploadViewController: UIViewController, UINavigationControllerDelegate, UI
         let imageTapRecognizer = UITapGestureRecognizer(target: self, action: #selector(selectImage))
         imageView.addGestureRecognizer(imageTapRecognizer)
         
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
+
+        view.addGestureRecognizer(tapGestureRecognizer)
         
         
     }
@@ -36,7 +42,7 @@ class UploadViewController: UIViewController, UINavigationControllerDelegate, UI
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        imageView.image = info[.originalImage] as? UIImage
+        imageView.image = info[.editedImage] as? UIImage
         self.dismiss(animated: true, completion: nil)
     }
     
@@ -65,17 +71,33 @@ class UploadViewController: UIViewController, UINavigationControllerDelegate, UI
                     imageReference.downloadURL { url, error in
                         if error == nil {
                             let imageUrl = url?.absoluteString
-                            
                             //DATABASE ACTIONS
-                            
-                            
-                            
-                            
-                            
+                            let firestoreDatabase = Firestore.firestore()
+                            var firestoreReference : DocumentReference? = nil
+                            let firestorePost = ["imageUrl" : imageUrl! , "postedBy" : Auth.auth().currentUser?.email, "postComment" : self.commentText.text!, "date" : self.postDate.date , "likes" : 0] as [String : Any]
+                            firestoreReference = firestoreDatabase.collection("Posts").addDocument(data: firestorePost, completion: { error in
+                                if error != nil {
+                                    self.makeAlert(titleInput: "Error", messageInput: error?.localizedDescription ?? "Error")
+                                } else {
+                                    self.imageView.image = UIImage(named: "upload photo")
+                                    self.commentText.text = ""
+                                    self.postDate.date = NSDate.now
+                                    self.tabBarController?.selectedIndex = 0
+                                }
+                            })
                         }
                     }
                 }
             }
         }
+    }
+    
+
+    @objc func hideKeyboard(){
+            view.endEditing(true)
+        }
+    
+    @IBAction func datePick(_ sender: Any) {
+        
     }
 }

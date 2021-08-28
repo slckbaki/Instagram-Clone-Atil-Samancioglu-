@@ -9,6 +9,15 @@ import UIKit
 
 class FeedCell: UITableViewCell {
 
+    @IBOutlet weak var postImageView: UIImageView!
+    
+    @IBOutlet weak var likeButton: UIButton!
+    @IBOutlet weak var postedDate: UIDatePicker!
+    @IBOutlet weak var likeLabel: UILabel!
+    @IBOutlet weak var commentsLabel: UILabel!
+    @IBOutlet weak var userEmailLabel: UILabel!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -20,4 +29,8 @@ class FeedCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+    @IBAction func likeClick(_ sender: Any) {
+        print("like clicked")
+        
+    }
 }
