@@ -28,8 +28,7 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
     override func viewDidLoad() {
         super.viewDidLoad()
 
-            //Github icin test
-        //GITHUB ICIN TEST2
+
         tableView.delegate = self
         tableView.dataSource = self
         
@@ -38,7 +37,9 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     func getDataFromFirestore(){
         let firestoreDatabase = Firestore.firestore()
-        firestoreDatabase.collection("Posts").addSnapshotListener { snapshot, error in
+        firestoreDatabase.collection("Posts").order(by: "date", descending: true)
+            
+            .addSnapshotListener { snapshot, error in
             if error != nil {
                 print(error?.localizedDescription)
             }else {
