@@ -332,7 +332,7 @@
                     <connections>
                         <outlet property="emailText" destination="GIb-t9-QS4" id="ekY-Yf-B4f"/>
                         <outlet property="passwordText" destination="VyU-tc-jo6" id="N5l-Yq-eYD"/>
-                        <segue destination="OxR-wO-Cmr" kind="presentation" identifier="toFeedVC" modalPresentationStyle="fullScreen" id="Ym9-v7-Rd4"/>
+                        <segue destination="T22-U4-jSY" kind="presentation" identifier="toFeedVC" modalPresentationStyle="fullScreen" id="cTO-a4-Uc8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -340,6 +340,9 @@
             <point key="canvasLocation" x="-2135.1999999999998" y="-242.42878560719643"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="cTO-a4-Uc8"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="f.circle.fill" catalog="system" width="128" height="121"/>
         <image name="hand.thumbsup.fill" catalog="system" width="128" height="121"/>
