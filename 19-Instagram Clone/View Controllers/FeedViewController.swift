@@ -27,6 +27,9 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
     var postedDateArray = [Date]()
     var documentIdArray = [String]()
     
+    let firestoreDatabase = Firestore.firestore()
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -46,16 +49,40 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
         print("PLAYER ID : \(playerId!)")
         
         if let playerNewId = playerId {
-            let firestoreReference = Firestore.firestore()
-            
-            let playerIdDictionary = ["email" : Auth.auth().currentUser?.email!, "player_id" : playerNewId] as! [String : Any]
-            firestoreReference.collection("PlayerId").addDocument(data: playerIdDictionary) { error in
-                if error != nil{
-                    print(error?.localizedDescription)
-                }else {
-                    
+
+            firestoreDatabase.collection("PlayerId").whereField("email", isEqualTo: Auth.auth().currentUser!.email).getDocuments { snapshot, error in
+                if error == nil {
+                    if snapshot?.isEmpty == false && snapshot != nil {
+                        for document in snapshot!.documents {
+                            if let playerIDFromFireBase = document.get("player_id"){
+                                print("playerIdFromFirebase : \(playerIDFromFireBase)")
+                                let documentId = document.documentID
+                                if playerNewId != playerIDFromFireBase as! String {
+                                    let playerIdDictionary = ["email" : Auth.auth().currentUser?.email!, "player_id" : playerNewId] as! [String : Any]
+                                    self.firestoreDatabase.collection("PlayerId").addDocument(data: playerIdDictionary) { error in
+                                        if error != nil{
+                                            print(error?.localizedDescription)
+                                        }
+                                        
+                                    }
+                                }
+
+                            }
+                        }
+                    }else{
+                        let playerIdDictionary = ["email" : Auth.auth().currentUser?.email!, "player_id" : playerNewId] as! [String : Any]
+                        self.firestoreDatabase.collection("PlayerId").addDocument(data: playerIdDictionary) { error in
+                            if error != nil{
+                                print(error?.localizedDescription)
+                            }
+                            
+                        }
+                        
+                    }
                 }
             }
+            
+
             
         }
         
@@ -64,7 +91,6 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     func getDataFromFirestore(){
-        let firestoreDatabase = Firestore.firestore()
         firestoreDatabase.collection("Posts").order(by: "date", descending: true)
             
             .addSnapshotListener { snapshot, error in
