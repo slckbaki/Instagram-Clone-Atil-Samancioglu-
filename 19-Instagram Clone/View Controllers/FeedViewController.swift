@@ -8,6 +8,8 @@
 import UIKit
 import Firebase
 import SDWebImage
+import OneSignal
+
 
 
 
@@ -33,6 +35,32 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
         tableView.dataSource = self
         
         getDataFromFirestore()
+        
+        // PUSH NOTIFICATION
+       // OneSignal.postNotification(["contents": ["en": "Test Message"], "include_player_ids": ["3b79117d-e15e-4e05-9cf4-38bb4bd441ef"]])
+        
+        // PLAYER ID
+        
+        let status = OneSignal.getDeviceState()
+        let playerId = status?.userId
+        print("PLAYER ID : \(playerId!)")
+        
+        if let playerNewId = playerId {
+            let firestoreReference = Firestore.firestore()
+            
+            let playerIdDictionary = ["email" : Auth.auth().currentUser?.email!, "player_id" : playerNewId] as! [String : Any]
+            firestoreReference.collection("PlayerId").addDocument(data: playerIdDictionary) { error in
+                if error != nil{
+                    print(error?.localizedDescription)
+                }else {
+                    
+                }
+            }
+            
+        }
+        
+        
+
     }
     
     func getDataFromFirestore(){
@@ -91,6 +119,7 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
         cell.postedDate.timeZone = TimeZone.current
 
         cell.commentsLabel.text = commentArray[indexPath.row]
+
         cell.postImageView.sd_setImage(with: URL(string: self.userImageArray[indexPath.row]))
         cell.documentIDLabel.text = documentIdArray[indexPath.row]
         return cell

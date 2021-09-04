@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		85100C11309D2273B51AA096 /* Pods_19_Instagram_Clone_OneSignalNotificationServiceExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E844E10800E1C1198655B8B /* Pods_19_Instagram_Clone_OneSignalNotificationServiceExtension.framework */; };
+		A1620EAC26E190320060CB08 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1620EAB26E190320060CB08 /* NotificationService.swift */; };
+		A1620EB026E190320060CB08 /* OneSignalNotificationServiceExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A1620EA926E190320060CB08 /* OneSignalNotificationServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		A199F5D926D4415A00F8A842 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A199F5D826D4415A00F8A842 /* AppDelegate.swift */; };
 		A199F5DB26D4415A00F8A842 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A199F5DA26D4415A00F8A842 /* SceneDelegate.swift */; };
 		A199F5DD26D4415A00F8A842 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A199F5DC26D4415A00F8A842 /* ViewController.swift */; };
@@ -21,9 +24,40 @@
 		BEFEBEAF18A39AB50DC1763A /* Pods_19_Instagram_Clone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6659CC6E3DADF59C0B3534F6 /* Pods_19_Instagram_Clone.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		A1620EAE26E190320060CB08 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A199F5CD26D4415A00F8A842 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A1620EA826E190320060CB08;
+			remoteInfo = OneSignalNotificationServiceExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A1620EB126E190320060CB08 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				A1620EB026E190320060CB08 /* OneSignalNotificationServiceExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		5CC6F9DA34B8CB697DD28C8C /* Pods-19-Instagram Clone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-19-Instagram Clone.debug.xcconfig"; path = "Target Support Files/Pods-19-Instagram Clone/Pods-19-Instagram Clone.debug.xcconfig"; sourceTree = "<group>"; };
 		6659CC6E3DADF59C0B3534F6 /* Pods_19_Instagram_Clone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_19_Instagram_Clone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E844E10800E1C1198655B8B /* Pods_19_Instagram_Clone_OneSignalNotificationServiceExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_19_Instagram_Clone_OneSignalNotificationServiceExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C794AA30E22E4CAA3020628 /* Pods-19-Instagram Clone-OneSignalNotificationServiceExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-19-Instagram Clone-OneSignalNotificationServiceExtension.debug.xcconfig"; path = "Target Support Files/Pods-19-Instagram Clone-OneSignalNotificationServiceExtension/Pods-19-Instagram Clone-OneSignalNotificationServiceExtension.debug.xcconfig"; sourceTree = "<group>"; };
+		90B45D90AFE796EA12385986 /* Pods-19-Instagram Clone-OneSignalNotificationServiceExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-19-Instagram Clone-OneSignalNotificationServiceExtension.release.xcconfig"; path = "Target Support Files/Pods-19-Instagram Clone-OneSignalNotificationServiceExtension/Pods-19-Instagram Clone-OneSignalNotificationServiceExtension.release.xcconfig"; sourceTree = "<group>"; };
+		A1620EA926E190320060CB08 /* OneSignalNotificationServiceExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = OneSignalNotificationServiceExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1620EAB26E190320060CB08 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		A1620EAD26E190320060CB08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A1620EB526E193100060CB08 /* 19-Instagram Clone.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "19-Instagram Clone.entitlements"; sourceTree = "<group>"; };
 		A199F5D526D4415A00F8A842 /* 19-Instagram Clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "19-Instagram Clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A199F5D826D4415A00F8A842 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A199F5DA26D4415A00F8A842 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -41,6 +75,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		A1620EA626E190320060CB08 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				85100C11309D2273B51AA096 /* Pods_19_Instagram_Clone_OneSignalNotificationServiceExtension.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A199F5D226D4415A00F8A842 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -52,10 +94,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A1620EAA26E190320060CB08 /* OneSignalNotificationServiceExtension */ = {
+			isa = PBXGroup;
+			children = (
+				A1620EAB26E190320060CB08 /* NotificationService.swift */,
+				A1620EAD26E190320060CB08 /* Info.plist */,
+			);
+			path = OneSignalNotificationServiceExtension;
+			sourceTree = "<group>";
+		};
 		A199F5CC26D4415A00F8A842 = {
 			isa = PBXGroup;
 			children = (
 				A199F5D726D4415A00F8A842 /* 19-Instagram Clone */,
+				A1620EAA26E190320060CB08 /* OneSignalNotificationServiceExtension */,
 				A199F5D626D4415A00F8A842 /* Products */,
 				C1C7D5174AAB17119BFAFBE3 /* Pods */,
 				D054566996955AB7AB33D669 /* Frameworks */,
@@ -66,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				A199F5D526D4415A00F8A842 /* 19-Instagram Clone.app */,
+				A1620EA926E190320060CB08 /* OneSignalNotificationServiceExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -73,6 +126,7 @@
 		A199F5D726D4415A00F8A842 /* 19-Instagram Clone */ = {
 			isa = PBXGroup;
 			children = (
+				A1620EB526E193100060CB08 /* 19-Instagram Clone.entitlements */,
 				A199F5D826D4415A00F8A842 /* AppDelegate.swift */,
 				A199F5DA26D4415A00F8A842 /* SceneDelegate.swift */,
 				A1D7B8A526D55BC4002BAF8A /* View Controllers */,
@@ -102,6 +156,8 @@
 			children = (
 				5CC6F9DA34B8CB697DD28C8C /* Pods-19-Instagram Clone.debug.xcconfig */,
 				FEABEFA182946B9901F2E96A /* Pods-19-Instagram Clone.release.xcconfig */,
+				8C794AA30E22E4CAA3020628 /* Pods-19-Instagram Clone-OneSignalNotificationServiceExtension.debug.xcconfig */,
+				90B45D90AFE796EA12385986 /* Pods-19-Instagram Clone-OneSignalNotificationServiceExtension.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -110,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				6659CC6E3DADF59C0B3534F6 /* Pods_19_Instagram_Clone.framework */,
+				6E844E10800E1C1198655B8B /* Pods_19_Instagram_Clone_OneSignalNotificationServiceExtension.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -117,6 +174,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		A1620EA826E190320060CB08 /* OneSignalNotificationServiceExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A1620EB426E190320060CB08 /* Build configuration list for PBXNativeTarget "OneSignalNotificationServiceExtension" */;
+			buildPhases = (
+				A178DBD7519F3539DFB6F76D /* [CP] Check Pods Manifest.lock */,
+				A1620EA526E190320060CB08 /* Sources */,
+				A1620EA626E190320060CB08 /* Frameworks */,
+				A1620EA726E190320060CB08 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OneSignalNotificationServiceExtension;
+			productName = OneSignalNotificationServiceExtension;
+			productReference = A1620EA926E190320060CB08 /* OneSignalNotificationServiceExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		A199F5D426D4415A00F8A842 /* 19-Instagram Clone */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A199F5E926D4417100F8A842 /* Build configuration list for PBXNativeTarget "19-Instagram Clone" */;
@@ -126,10 +201,12 @@
 				A199F5D226D4415A00F8A842 /* Frameworks */,
 				A199F5D326D4415A00F8A842 /* Resources */,
 				9ABCB9D5D7C538A2ECEEC428 /* [CP] Embed Pods Frameworks */,
+				A1620EB126E190320060CB08 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				A1620EAF26E190320060CB08 /* PBXTargetDependency */,
 			);
 			name = "19-Instagram Clone";
 			productName = "19-Instagram Clone";
@@ -145,6 +222,9 @@
 				LastSwiftUpdateCheck = 1250;
 				LastUpgradeCheck = 1250;
 				TargetAttributes = {
+					A1620EA826E190320060CB08 = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
 					A199F5D426D4415A00F8A842 = {
 						CreatedOnToolsVersion = 12.5.1;
 					};
@@ -164,11 +244,19 @@
 			projectRoot = "";
 			targets = (
 				A199F5D426D4415A00F8A842 /* 19-Instagram Clone */,
+				A1620EA826E190320060CB08 /* OneSignalNotificationServiceExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		A1620EA726E190320060CB08 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A199F5D326D4415A00F8A842 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -200,6 +288,28 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-19-Instagram Clone/Pods-19-Instagram Clone-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		A178DBD7519F3539DFB6F76D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-19-Instagram Clone-OneSignalNotificationServiceExtension-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		C8223AE7B2A699997852534A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -225,6 +335,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		A1620EA526E190320060CB08 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1620EAC26E190320060CB08 /* NotificationService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A199F5D126D4415A00F8A842 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -240,6 +358,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A1620EAF26E190320060CB08 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A1620EA826E190320060CB08 /* OneSignalNotificationServiceExtension */;
+			targetProxy = A1620EAE26E190320060CB08 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		A199F5DE26D4415A00F8A842 /* Main.storyboard */ = {
@@ -261,6 +387,48 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		A1620EB226E190320060CB08 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8C794AA30E22E4CAA3020628 /* Pods-19-Instagram Clone-OneSignalNotificationServiceExtension.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 35KVTA4YKJ;
+				INFOPLIST_FILE = OneSignalNotificationServiceExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tourvidi.-9-Instagram-Clone.OneSignalNotificationServiceExtension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		A1620EB326E190320060CB08 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 90B45D90AFE796EA12385986 /* Pods-19-Instagram Clone-OneSignalNotificationServiceExtension.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 35KVTA4YKJ;
+				INFOPLIST_FILE = OneSignalNotificationServiceExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tourvidi.-9-Instagram-Clone.OneSignalNotificationServiceExtension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
 		A199F5E726D4417100F8A842 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -381,8 +549,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5CC6F9DA34B8CB697DD28C8C /* Pods-19-Instagram Clone.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "19-Instagram Clone/19-Instagram Clone.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 35KVTA4YKJ;
 				INFOPLIST_FILE = "19-Instagram Clone/Info.plist";
@@ -401,8 +571,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FEABEFA182946B9901F2E96A /* Pods-19-Instagram Clone.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "19-Instagram Clone/19-Instagram Clone.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 35KVTA4YKJ;
 				INFOPLIST_FILE = "19-Instagram Clone/Info.plist";
@@ -420,6 +592,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		A1620EB426E190320060CB08 /* Build configuration list for PBXNativeTarget "OneSignalNotificationServiceExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A1620EB226E190320060CB08 /* Debug */,
+				A1620EB326E190320060CB08 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		A199F5D026D4415A00F8A842 /* Build configuration list for PBXProject "19-Instagram Clone" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

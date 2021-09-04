@@ -7,6 +7,7 @@
 
 import UIKit
 import Firebase
+import OneSignal
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,6 +18,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         FirebaseApp.configure()
+        
+        OneSignal.setLogLevel(.LL_VERBOSE, visualLevel: .LL_NONE)
+
+        
+        // OneSignal initialization
+         OneSignal.initWithLaunchOptions(launchOptions)
+         OneSignal.setAppId("f297dfe6-7402-42ca-bb94-84bdf39841e4")
+
+         // promptForPushNotifications will show the native iOS notification permission prompt.
+         // We recommend removing the following code and instead using an In-App Message to prompt for notification permission (See step 8)
+         OneSignal.promptForPushNotifications(userResponse: { accepted in
+           print("User accepted notifications: \(accepted)")
+         })
+        
         return true
     }
 

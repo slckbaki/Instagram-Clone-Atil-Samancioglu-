@@ -12,7 +12,11 @@ pod 'Firebase/Firestore'
 pod 'Firebase/Core'
 pod 'Firebase/Storage'
 pod 'SDWebImage'
+pod 'OneSignalXCFramework', '>= 3.0.0', '< 4.0'
 
+target 'OneSignalNotificationServiceExtension' do
+  pod 'OneSignalXCFramework', '>= 3.0.0', '< 4.0'
+end
 
 
   # Pods for 19-Instagram Clone

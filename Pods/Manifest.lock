@@ -337,6 +337,7 @@ PODS:
     - nanopb/encode (= 2.30908.0)
   - nanopb/decode (2.30908.0)
   - nanopb/encode (2.30908.0)
+  - OneSignalXCFramework (3.7.0)
   - PromisesObjC (1.2.12)
   - SDWebImage (5.11.0):
     - SDWebImage/Core (= 5.11.0)
@@ -348,6 +349,7 @@ DEPENDENCIES:
   - Firebase/Core
   - Firebase/Firestore
   - Firebase/Storage
+  - OneSignalXCFramework (< 4.0, >= 3.0.0)
   - SDWebImage
 
 SPEC REPOS:
@@ -370,6 +372,7 @@ SPEC REPOS:
     - GTMSessionFetcher
     - leveldb-library
     - nanopb
+    - OneSignalXCFramework
     - PromisesObjC
     - SDWebImage
 
@@ -392,9 +395,10 @@ SPEC CHECKSUMS:
   GTMSessionFetcher: b3503b20a988c4e20cc189aa798fd18220133f52
   leveldb-library: 50c7b45cbd7bf543c81a468fe557a16ae3db8729
   nanopb: a0ba3315591a9ae0a16a309ee504766e90db0c96
+  OneSignalXCFramework: 974dc438d68910cf04f3c8ab034e0131d41438c1
   PromisesObjC: 3113f7f76903778cf4a0586bd1ab89329a0b7b97
   SDWebImage: 7acbb57630ac7db4a495547fb73916ff3e432f6b
 
-PODFILE CHECKSUM: e8ca275edf4421fe4a8c0517bc29c7cffce4d9d2
+PODFILE CHECKSUM: 16fb9e012c487ac971d5fe6d9c8f1744f8b4c5b9
 
 COCOAPODS: 1.10.2
